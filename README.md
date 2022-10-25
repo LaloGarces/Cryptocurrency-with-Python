@@ -15,6 +15,15 @@
 4. Decentralizing the Blockchain.
 5. Running the demo with Flask and Postman.
 
+Dictionary:
+
+-get_chain = Generate genesis block and the new blocks after mining them.
+-conect_node = Connect each node to the blockchain.
+-mine_block = Mining the block in "YOUR" node, each node need to mine each block.
+-replace_chain = Let you get the entire chain with all the blocks of all the nodes. Working like a concensus.
+-add_transaction = To send crypto to another node.
+
+
 ### Important. 
 
 After running the Code and when running the Demo, it is important to put attention in the next steps to run correctly the Demo:
@@ -488,7 +497,9 @@ http://0.0.0.0:5002/replace_chain
 ```
 
 
+And that's it! We have a fully connected Blockchain with 3 nodes receiving and sending Cryptocurrency!
 
+Hope this demo help you! 😊
 
 
 
