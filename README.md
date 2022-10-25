@@ -17,11 +17,11 @@
 
 Dictionary:
 
--get_chain = Generate genesis block and the new blocks after mining them.
--conect_node = Connect each node to the blockchain.
--mine_block = Mining the block in "YOUR" node, each node need to mine each block.
--replace_chain = Let you get the entire chain with all the blocks of all the nodes. Working like a concensus.
--add_transaction = To send crypto to another node.
+- get_chain = Generate genesis block and the new blocks after mining them.
+- conect_node = Connect each node to the blockchain.
+- mine_block = Mining the block in "YOUR" node, each node need to mine each block.
+- replace_chain = Let you get the entire chain with all the blocks of all the nodes. Working like a concensus.
+- add_transaction = To send crypto to another node.
 
 
 ### Important. 
