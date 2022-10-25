@@ -36,3 +36,22 @@ app.run(host='0.0.0.0', port=5000)
 app.run(host='0.0.0.0', port=5001)
 app.run(host='0.0.0.0', port=5003)
  ```
+ 
+ Create the genesis block with the port 5000 (Node 1) and the GET: get_chain:
+
+ ```
+ {
+    "chain": [
+        {
+            "index": 1,
+            "previous_hash": "0",
+            "proof": 1,
+            "timestamp": "2022-10-25 14:26:36.240661",
+            "transactions": []
+        }
+    ],
+    "length": 1
+}
+ ``` 
+ 
+ 
