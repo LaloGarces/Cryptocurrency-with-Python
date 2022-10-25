@@ -162,3 +162,62 @@ Do the same for the other 2 nodes.
 }
 ```
 
+## Step 6
+
+If we ask to our nodes to verify their current chain, they're not going to have the largest chain. Only in their chain, they're going to have the genesis block:
+
+```
+http://0.0.0.0:5001/get_chain
+```
+
+```
+{
+    "chain": [
+        {
+            "index": 1,
+            "previous_hash": "0",
+            "proof": 1,
+            "timestamp": "2022-10-25 14:43:42.913803",
+            "transactions": []
+        }
+    ],
+    "length": 1
+}
+```
+
+
+```
+http://0.0.0.0:5002/get_chain
+```
+
+```
+{
+    "chain": [
+        {
+            "index": 1,
+            "previous_hash": "0",
+            "proof": 1,
+            "timestamp": "2022-10-25 14:43:47.005129",
+            "transactions": []
+        }
+    ],
+    "length": 1
+}
+```
+
+## Step 7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
