@@ -27,9 +27,12 @@ How can we run different nodes with the same code?
 
 Simple, just at the moment to run the Demo, for each node, just you need to change the port. In the case if this demo, we used 3 different ports/nodes, but you can use as many as you like. 
 
+- port=5000 (Computer 1)
+- port=5001 (Computer 2)
+- port=5002 (Computer 3)
+
  ```
 app.run(host='0.0.0.0', port=5000)
 app.run(host='0.0.0.0', port=5001)
 app.run(host='0.0.0.0', port=5003)
-
  ```
