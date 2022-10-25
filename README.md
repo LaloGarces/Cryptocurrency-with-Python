@@ -13,4 +13,4 @@
 2. Creating the Blockchain and the Cryptocurrency.
 3. Mining the Blockchain.
 4. Decentralizing the Blockchain.
-5. Running the app/development with Flask and Postman.
+5. Running the demo with Flask and Postman.
