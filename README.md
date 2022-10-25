@@ -274,6 +274,67 @@ http://0.0.0.0:5002/replace_chain
 ```
 
 
+## Step 8
+
+Finally Transactions!
+We're going to send Altcoins to one of the other nodes of the chain. Within postman please follow the next route: POST > Body > Raw > JSON.
+Use de Json file for Transactions and the add_transaction:
+
+From Node 1
+
+InputL:
+
+```
+{
+    "sender": "Lalo",
+    "receiver": "Binance",
+    "amount": 1.5
+}
+```
+
+Output:
+```
+{
+    "message": "This transaction will be added to Block 3"
+}
+```
+
+## Step 9
+The transaction is not part of the Blockchain due haven't been mined, so, we need to mine this block to be added to the chain. Notice how the chain in node 1, has the 2 transactions done:
+
+```
+http://0.0.0.0:500/mine_block
+```
+
+```
+{
+    "index": 3,
+    "message": "You just have mined succesfully a block!",
+    "previous_hash": "88771c312060ce019d412e858cc8ea9f89440bd7aeeedacb36bfd26e9b83777b",
+    "proof": 45293,
+    "timestamp": "2022-10-25 15:20:56.591416",
+    "transactions": [
+        {
+            "amount": 1.5,
+            "receiver": "Binance",
+            "sender": "Lalo"
+        },
+        {
+            "amount": 1,
+            "receiver": "Lalo",
+            "sender": "09e6204d064c4e408bbca133d94a66af"
+        }
+    ]
+}
+```
+
+
+
+
+
+
+
+
 
 
 
