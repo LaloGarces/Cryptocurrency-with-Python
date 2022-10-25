@@ -155,20 +155,28 @@ Do the same for the other 2 nodes.
  In node 1, use the get_chain to se all the current blocks you have in your current chain:
 
 ```
- {
-    "index": 2,
-    "message": "You just have mined succesfully a block!",
-    "previous_hash": "0f4370ab93384b986c6d5d809c25e3b1296a6e894998d8d8c0d8a293ba380816",
-    "proof": 533,
-    "timestamp": "2022-10-25 14:49:09.542492",
-    "transactions": [
+{
+    "chain": [
         {
-            "amount": 1,
-            "receiver": "Lalo",
-            "sender": "09e6204d064c4e408bbca133d94a66af"
+            "index": 1,
+            "previous_hash": "0",
+            "proof": 1,
+            "timestamp": "2022-10-25 14:43:38.026823",
+            "transactions": []
+        },
+        {
+            "index": 2,
+            "previous_hash": "0f4370ab93384b986c6d5d809c25e3b1296a6e894998d8d8c0d8a293ba380816",
+            "proof": 533,
+            "timestamp": "2022-10-25 14:49:09.542492",
+            "transactions": [
+                {
+                    "amount": 1,
+                    "receiver": "Lalo",
+                    "sender": "09e6204d064c4e408bbca133d94a66af"
+                }
+            ]
         }
-    ]
-}
 ```
 
 ## Step 6
