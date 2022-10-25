@@ -92,7 +92,7 @@ Create genesis Block with port 5001 for the second computer/node and port 5002 f
 
  ## Step 3
 
-Connect the nodes with the json file of "Nodes" & the conect_node.
+Connect the nodes with the json file of "Nodes" & the connect_node.
 
 Within postman please follow the next route: POST > Body > Raw > JSON.
 
@@ -102,8 +102,8 @@ Input
 
 ```
 {
-    "nodes": ["http://127.0.0.1:501",
-              "http://127.0.0.1:502"]
+    "nodes": ["http://127.0.0.1:5001",
+              "http://127.0.0.1:5002"]
 }
 ```
 
@@ -113,8 +113,30 @@ Output
 {
     "message": "All nodes are now connected. The Altcoin Blockchain contains the following nodes:",
     "total_nodes": [
-        "127.0.0.1:501",
-        "127.0.0.1:502"
+        "127.0.0.1:5001",
+        "127.0.0.1:5002"
+    ]
+}
+```
+Do the same for the other 2 nodes. 
+
+ ## Step 4
+ 
+ In node 1 mine the block with mine_block. It's important to mine the Block to register the transaction done in the previous step. Notice that the amount sent was 1 Altcoin:
+ 
+ ```
+ {
+    "index": 2,
+    "message": "You just have mined succesfully a block!",
+    "previous_hash": "0f4370ab93384b986c6d5d809c25e3b1296a6e894998d8d8c0d8a293ba380816",
+    "proof": 533,
+    "timestamp": "2022-10-25 14:49:09.542492",
+    "transactions": [
+        {
+            "amount": 1,
+            "receiver": "Lalo",
+            "sender": "09e6204d064c4e408bbca133d94a66af"
+        }
     ]
 }
 ```
