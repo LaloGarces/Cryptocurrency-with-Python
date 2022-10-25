@@ -54,4 +54,43 @@ app.run(host='0.0.0.0', port=5003)
 }
  ``` 
  
+ ## Step 2
  
+Create genesis Block with port 501 for the second computer/node and port 502 for the third computer/node:
+
+ Node 2
+ ```
+{
+    "chain": [
+        {
+            "index": 1,
+            "previous_hash": "0",
+            "proof": 1,
+            "timestamp": "2022-10-25 14:26:50.214574",
+            "transactions": []
+        }
+    ],
+    "length": 1
+}
+ ```
+ 
+ Node 3
+  ```
+  {
+    "chain": [
+        {
+            "index": 1,
+            "previous_hash": "0",
+            "proof": 1,
+            "timestamp": "2022-10-25 14:27:00.446063",
+            "transactions": []
+        }
+    ],
+    "length": 1
+}
+   ```
+
+
+
+
+
