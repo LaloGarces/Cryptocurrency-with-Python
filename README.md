@@ -14,3 +14,7 @@
 3. Mining the Blockchain.
 4. Decentralizing the Blockchain.
 5. Running the demo with Flask and Postman.
+
+### Important. 
+
+After running the Code and when running the Demo, is important to put attention in the next steps to run correctly the Demo and your audience understand the way of work: 
