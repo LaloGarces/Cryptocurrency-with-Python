@@ -56,7 +56,7 @@ app.run(host='0.0.0.0', port=5003)
  
  ## Step 2
  
-Create genesis Block with port 501 for the second computer/node and port 502 for the third computer/node:
+Create genesis Block with port 5001 for the second computer/node and port 5002 for the third computer/node:
 
  Node 2
  ```
@@ -90,7 +90,31 @@ Create genesis Block with port 501 for the second computer/node and port 502 for
 }
    ```
 
+ ## Step 3
 
+Connect the nodes with the json file of "Nodes" & the conect_node.
 
+Within postman please follow the next route: POST > Body > Raw > JSON.
 
+Like we're connecting the nodes from node 1, we only in the JSON file use node 2 and node 3:
 
+Input
+
+```
+{
+    "nodes": ["http://127.0.0.1:501",
+              "http://127.0.0.1:502"]
+}
+```
+
+Output
+
+```
+{
+    "message": "All nodes are now connected. The Altcoin Blockchain contains the following nodes:",
+    "total_nodes": [
+        "127.0.0.1:501",
+        "127.0.0.1:502"
+    ]
+}
+```
