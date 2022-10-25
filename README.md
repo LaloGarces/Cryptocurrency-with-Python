@@ -303,7 +303,7 @@ Output:
 The transaction is not part of the Blockchain due haven't been mined, so, we need to mine this block to be added to the chain. Notice how the chain in node 1, has the 2 transactions done:
 
 ```
-http://0.0.0.0:500/mine_block
+http://0.0.0.0:5000/mine_block
 ```
 
 ```
@@ -328,10 +328,59 @@ http://0.0.0.0:500/mine_block
 }
 ```
 
+## Step 10
 
+You need to verify all the blocks in the chain of node 1 (Result: 3 Blocks):
 
+```
+http://0.0.0.0:500/get_chain
+```
 
-
+```
+{
+    "chain": [
+        {
+            "index": 1,
+            "previous_hash": "0",
+            "proof": 1,
+            "timestamp": "2022-10-25 14:43:38.026823",
+            "transactions": []
+        },
+        {
+            "index": 2,
+            "previous_hash": "0f4370ab93384b986c6d5d809c25e3b1296a6e894998d8d8c0d8a293ba380816",
+            "proof": 533,
+            "timestamp": "2022-10-25 14:49:09.542492",
+            "transactions": [
+                {
+                    "amount": 1,
+                    "receiver": "Lalo",
+                    "sender": "09e6204d064c4e408bbca133d94a66af"
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "previous_hash": "88771c312060ce019d412e858cc8ea9f89440bd7aeeedacb36bfd26e9b83777b",
+            "proof": 45293,
+            "timestamp": "2022-10-25 15:20:56.591416",
+            "transactions": [
+                {
+                    "amount": 1.5,
+                    "receiver": "Binance",
+                    "sender": "Lalo"
+                },
+                {
+                    "amount": 1,
+                    "receiver": "Lalo",
+                    "sender": "09e6204d064c4e408bbca133d94a66af"
+                }
+            ]
+        }
+    ],
+    "length": 3
+}
+```
 
 
 
