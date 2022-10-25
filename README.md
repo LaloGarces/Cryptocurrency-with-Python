@@ -333,7 +333,7 @@ http://0.0.0.0:5000/mine_block
 You need to verify all the blocks in the chain of node 1 (Result: 3 Blocks):
 
 ```
-http://0.0.0.0:500/get_chain
+http://0.0.0.0:5000/get_chain
 ```
 
 ```
@@ -382,7 +382,110 @@ http://0.0.0.0:500/get_chain
 }
 ```
 
+## Step 11
 
+But if we see node 2 and node 3, they only have 2 blocks in their chain, so, remember apply the concensus "replace_chain" to have all the nodes aligned with the same transactions in the chain: 
+
+```
+http://0.0.0.0:5001/replace_chain
+```
+
+```
+{
+    "message": "The nodes had different chains so the chain was replaced by the longest one.",
+    "new_chain": [
+        {
+            "index": 1,
+            "previous_hash": "0",
+            "proof": 1,
+            "timestamp": "2022-10-25 14:43:38.026823",
+            "transactions": []
+        },
+        {
+            "index": 2,
+            "previous_hash": "0f4370ab93384b986c6d5d809c25e3b1296a6e894998d8d8c0d8a293ba380816",
+            "proof": 533,
+            "timestamp": "2022-10-25 14:49:09.542492",
+            "transactions": [
+                {
+                    "amount": 1,
+                    "receiver": "Lalo",
+                    "sender": "09e6204d064c4e408bbca133d94a66af"
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "previous_hash": "88771c312060ce019d412e858cc8ea9f89440bd7aeeedacb36bfd26e9b83777b",
+            "proof": 45293,
+            "timestamp": "2022-10-25 15:20:56.591416",
+            "transactions": [
+                {
+                    "amount": 1.5,
+                    "receiver": "Binance",
+                    "sender": "Lalo"
+                },
+                {
+                    "amount": 1,
+                    "receiver": "Lalo",
+                    "sender": "09e6204d064c4e408bbca133d94a66af"
+                }
+            ]
+        }
+    ]
+}
+```
+
+
+```
+http://0.0.0.0:5002/replace_chain
+```
+
+```
+{
+    "message": "The nodes had different chains so the chain was replaced by the longest one.",
+    "new_chain": [
+        {
+            "index": 1,
+            "previous_hash": "0",
+            "proof": 1,
+            "timestamp": "2022-10-25 14:43:38.026823",
+            "transactions": []
+        },
+        {
+            "index": 2,
+            "previous_hash": "0f4370ab93384b986c6d5d809c25e3b1296a6e894998d8d8c0d8a293ba380816",
+            "proof": 533,
+            "timestamp": "2022-10-25 14:49:09.542492",
+            "transactions": [
+                {
+                    "amount": 1,
+                    "receiver": "Lalo",
+                    "sender": "09e6204d064c4e408bbca133d94a66af"
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "previous_hash": "88771c312060ce019d412e858cc8ea9f89440bd7aeeedacb36bfd26e9b83777b",
+            "proof": 45293,
+            "timestamp": "2022-10-25 15:20:56.591416",
+            "transactions": [
+                {
+                    "amount": 1.5,
+                    "receiver": "Binance",
+                    "sender": "Lalo"
+                },
+                {
+                    "amount": 1,
+                    "receiver": "Lalo",
+                    "sender": "09e6204d064c4e408bbca133d94a66af"
+                }
+            ]
+        }
+    ]
+}
+```
 
 
 
