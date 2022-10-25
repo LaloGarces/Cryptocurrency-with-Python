@@ -207,12 +207,71 @@ http://0.0.0.0:5002/get_chain
 
 ## Step 7
 
+Asking to each node use the replace_chain, is going to let us add the new blocks to each of the nodes:
 
+```
+http://0.0.0.0:5001/replace_chain
+```
 
+```
+{
+    "message": "The nodes had different chains so the chain was replaced by the longest one.",
+    "new_chain": [
+        {
+            "index": 1,
+            "previous_hash": "0",
+            "proof": 1,
+            "timestamp": "2022-10-25 14:43:38.026823",
+            "transactions": []
+        },
+        {
+            "index": 2,
+            "previous_hash": "0f4370ab93384b986c6d5d809c25e3b1296a6e894998d8d8c0d8a293ba380816",
+            "proof": 533,
+            "timestamp": "2022-10-25 14:49:09.542492",
+            "transactions": [
+                {
+                    "amount": 1,
+                    "receiver": "Lalo",
+                    "sender": "09e6204d064c4e408bbca133d94a66af"
+                }
+            ]
+        }
+    ]
+}
+```
 
+```
+http://0.0.0.0:5002/replace_chain
+```
 
-
-
+```
+{
+    "message": "The nodes had different chains so the chain was replaced by the longest one.",
+    "new_chain": [
+        {
+            "index": 1,
+            "previous_hash": "0",
+            "proof": 1,
+            "timestamp": "2022-10-25 14:43:38.026823",
+            "transactions": []
+        },
+        {
+            "index": 2,
+            "previous_hash": "0f4370ab93384b986c6d5d809c25e3b1296a6e894998d8d8c0d8a293ba380816",
+            "proof": 533,
+            "timestamp": "2022-10-25 14:49:09.542492",
+            "transactions": [
+                {
+                    "amount": 1,
+                    "receiver": "Lalo",
+                    "sender": "09e6204d064c4e408bbca133d94a66af"
+                }
+            ]
+        }
+    ]
+}
+```
 
 
 
