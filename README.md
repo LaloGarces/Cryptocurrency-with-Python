@@ -17,4 +17,12 @@
 
 ### Important. 
 
-After running the Code and when running the Demo, is important to put attention in the next steps to run correctly the Demo and your audience understand the way of work: 
+After running the Code and when running the Demo, it is important to put attention in the next steps to run correctly the Demo and your audience understand the way of work:
+
+### Step 1
+
+Important to run the code of each node in different computers or terminals to create a decentralized blockchain and send transactions to each computer/node.
+
+How can we run different nodes with the same code?
+
+Simple, just at the moment to run the Demo 
