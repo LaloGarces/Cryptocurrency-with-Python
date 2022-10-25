@@ -25,6 +25,11 @@ Important to run the code of each node in different computers or terminals to cr
 
 How can we run different nodes with the same code?
 
-Simple, just at the moment to run the Demo, for each node, just you need to change the port. In the case if this demo, we used 3 different ports/nodes, but you can as many as you like. 
+Simple, just at the moment to run the Demo, for each node, just you need to change the port. In the case if this demo, we used 3 different ports/nodes, but you can use as many as you like. 
 
+ ```
 app.run(host='0.0.0.0', port=5000)
+app.run(host='0.0.0.0', port=5001)
+app.run(host='0.0.0.0', port=5003)
+
+ ```
